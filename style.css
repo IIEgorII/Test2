@@ -1,0 +1,306 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #02886d;
+}
+
+.logo img {
+    border-radius: 50%;
+    width: 93px;
+    height: 93px;
+    margin-left: 3ex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+}
+
+nav ul li {
+    font-size: 3ex;
+    margin-right: 2ex;
+    font-weight: bold;
+    /* background-color: #36cf99;
+    border-radius:8px; */
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #b6bebe;
+    border-radius: 8px;
+}
+
+.hero {
+    background-image: url('imgs/Фон.jpg');
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.company-name {
+    font-size: 70px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.about,
+.services,
+.gallery,
+.contacts,
+.request {
+    padding: 30px;
+    text-align: left;
+}
+
+.request h2 {
+    font-size: xx-large;
+    text-align: center;
+}
+
+.request-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.request-image {
+    height: 400px;
+    width: 590px;
+
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.request-form {
+    flex: 1;
+}
+
+.request-form h2 {
+    margin-bottom: 30px;
+}
+
+.request-form textarea {
+    resize: none;
+    width: 80%;
+    max-width: 80%;
+}
+
+.request-form input {
+    resize: none;
+    width: 80%;
+    max-width: 80%;
+}
+
+.services h2 {
+    font-size: xx-large;
+}
+
+.services-img img {
+    height: 500px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+}
+
+.contacts-img img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        /* text-align: center; */
+    height: 120px;
+    width: 120;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+}
+
+.contacts p {
+    font-size: large;
+}
+
+.about-content {
+    padding: 20px;
+}
+
+.about-title {
+    text-align: left;
+    font-size: xx-large;
+
+}
+
+.about-details {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: x-large;
+}
+
+.about-details p {
+    flex: 1;
+    margin-right: 20px;
+    margin-top: 20px;
+    text-align: "justify";
+}
+
+.about-image {
+    max-width: 650px;
+    border-radius: 10px;
+}
+
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #02886d;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.card h3 {
+    font-size: xx-large;
+}
+
+.card p {
+    font-size: x-large;
+}
+
+.gallery h2 {
+    font-size: xx-large;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.gallery-images img {
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contacts h2 {
+    font-size: xx-large;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #02886d;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input,
+form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 350px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #02886d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #02886d;
+}
+
+.testimonials-slider {
+    background-color: #f9f9f9; /* Светлый фон для контраста */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрирование текста */
+    max-width: 600px; /* Максимальная ширина слайдера */
+    margin: 20px auto; /* Центрирование слайдера на странице */
+}
+
+.testimonial {
+    margin-bottom: 20px; /* Отступ между отзывами */
+}
+.testimonials-sliderh2{
+    font-size: xx-large;
+    padding: 30px;
+    text-align: left;
+}
+
+.testimonial-image {
+    border-radius: 10%; /* Круглая форма изображения */
+    width: 230px; /* Ширина и��ображения */
+    height: 230px; /* Высота изображения */
+    object-fit: cover; /* Обеспечение правильного отображения изображения */
+}
+
+.testimonial-text {
+    font-size: 1.2em; /* Размер шрифта для текста отзыва */
+    color: #333; /* Цвет текста */
+    margin: 10px 0; /* Отступ сверху и снизу */
+}
+
+.testimonial-author {
+    font-weight: bold; /* Жирный шрифт для имени автора */
+    color: #555; /* Цвет имени автора */
+}
+
+button {
+    background-color: #02886d; /* Цвет кнопок */
+    color: white; /* Цвет текста кнопок */
+    border: none; /* Убираем рамку */
+    padding: 10px 15px; /* Отступы внутри кнопок */
+    border-radius: 5px; /* Скругление углов кнопок */
+    cursor: pointer; /* Указатель при наведении */
+    margin: 5px; /* Отступ между кнопками */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+button:hover {
+    background-color: #02886d; /* Цвет кнопки при наведении */
+}

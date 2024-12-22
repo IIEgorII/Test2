@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurin Garden</title>
+    <link rel="shortcut icon" href="imgs/logo.jpg" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="imgs/logo.jpg">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1 class="company-name">Gurin Garden</h1>
+    </section>
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2 class="about-title">Наша философия</h2>
+            <div class="about-details">
+                <p>«Красивый, цветущий сад — это не только красота и уют, которые радуют вас и ваших близких. Это
+                    выгодная инвестиция, которая со временем сделает ваш участок более привлекательным для покупки и
+                    более выгодным для продажи»<br>Мы умеем почувствовать своего заказчика и создаем по-настоящему
+                    уникальные ландшафты, которые радуют людей долгие годы: упаковываем желания и мечты в правильную
+                    формулу. Именно поэтому наши проекты нравятся, мы получаем отзывы благодарных клиентов, нас
+                    рекомендуют знакомым и друзьям."</p>
+                <img src="imgs/О нас.png" alt="О нас" class="about-image">
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <h2>Наши услуги</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Проектирование</h3>
+                <div class="services-img">
+                    <img src="imgs/Услуга 1(2).png">
+                </div>
+                <p>Создание уникальных проектов ландшафтного дизайна для вашего участка.</p>
+            </div>
+            <div class="card">
+                <h3>Устройство газонов</h3>
+                <div class="services-img">
+                    <img src="imgs/Услуга 2.png">
+                </div>
+                <p>Профессиональное устройство и уход за газонами.</p>
+            </div>
+            <div class="card">
+                <h3>Посадка растений</h3>
+                <div class="services-img">
+                    <img src="imgs/Услуга 3.png">
+                </div>
+                <p>Выбор и посадка растений, соответствующих вашему стилю.</p>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="gallery">
+        <h2>Галерея работ</h2>
+        <div class="gallery-images">
+            <img src="imgs/1.png" alt="Работа 1">
+            <img src="imgs/2.png" alt="Работа 2">
+            <img src="imgs/3.png" alt="Работа 3">
+            <img src="imgs/4.png" alt="Работа 4">
+            <img src="imgs/5.png" alt="Работа 5">
+            <img src="imgs/6.png" alt="Работа 6">
+        </div>
+    </section>
+    <section id="contacts" class="contacts">
+        <h2>Контакты</h2>
+        <div class="contact-info">
+            <div>
+                <div class="contacts-img">
+                    <img src="imgs/icons_1.jpg">
+                </div>
+                <p>Телефон: +7 (123) 456-78-90</p>
+            </div>
+            <div>
+                <div class="contacts-img">
+                    <img src="imgs/icons_2.jpg">
+                </div>
+                <p>Почта: info@guringarden.ru</p>
+            </div>
+            <div>
+                <div class="contacts-img">
+                    <img src="imgs/icons_3.jpg">
+                </div>
+                <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
+            </div>
+        </div>
+    </section>
+    <section class="request">
+        <div class="request-content">
+            <section aria-label="Отзывы клиентов" class="testimonials-slider">
+        
+                <div class="testimonial">
+                    <img src="imgs/Отзыв1.jpg" alt="Изображение автора: Иван Иванов"
+                        class="testimonial-image" />
+                    <p class="testimonial-text">Отличный сервис! Рекомендую всем.</p>
+                    <h4 class="testimonial-author">Иван Иванов</h4>
+                </div>
+                <button id="prevBtn" aria-label="Предыдущий отзыв">Назад</button>
+                <button id="nextBtn" aria-label="Следующий отзыв">Вперед</button>
+            </section>
+            <div class="request-form">
+                <h2>Оставить заявку</h2>
+                <form id="requestForm">
+                    <input type="tel" placeholder="Ваш телефон" required>
+                    <input type="email" placeholder="Ваша почта" required>
+                    <textarea placeholder="Описание заказа" required class="description"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- <section aria-label="Отзывы клиентов" class="testimonials-slider">
+        
+        <div class="testimonial">
+            <img src="imgs/Отзыв1.jpg" alt="Изображение автора: Иван Иванов"
+                class="testimonial-image" />
+            <p class="testimonial-text">Отличный сервис! Рекомендую всем.</p>
+            <h4 class="testimonial-author">Иван Иванов</h4>
+        </div>
+        <button id="prevBtn" aria-label="Предыдущий отзыв">Назад</button>
+        <button id="nextBtn" aria-label="Следующий отзыв">Вперед</button>
+    </section> -->
+
+    <footer>
+        <p>&copy; 2024 Gurin Garden. Все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
