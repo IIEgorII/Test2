@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали проекта</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .project-details img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .project-details h2 {
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-details p {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        header {
+            background-color: #02886d;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Детали проекта</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="project-details">
+            <img id="projectImage" src="" alt="Изображение проекта">
+            <h2 id="projectTitle">Название проекта</h2>
+            <p id="designerName">Дизайнер: Имя Дизайнера</p>
+            <p id="plantNames">Растения: Названия Растений</p>
+            <p id="completionTime">Срок реализации: Срок</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gurin Garden. Все права защищены.</p>
+    </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('project');
+
+        const projectDetails = {
+            1: {
+                image: "imgs/1.png",
+                title: 'Проект 1',
+                designer: 'Иван Иванов',
+                plants: 'Роза, Тюльпан',
+                time: '2 месяца'
+            },
+            2: {
+                image: 'imgs/2.png',
+                title: 'Проект 2',
+                designer: 'Анна Петрова',
+                plants: 'Лаванда, Фиалка',
+                time: '1.5 месяца'
+            },
+            3: {
+                image: 'imgs/3.png',
+                title: 'Проект "Японский минимализм"',
+                designer: 'Михаил Сидоров',
+                plants: 'Клен японский, Бамбук, Азалия',
+                time: '3 месяца'
+            },
+            4: {
+                image: 'imgs/4.png',
+                title: 'Проект "Средиземноморский стиль"',
+                designer: 'Елена Козлова',
+                plants: 'Оливковое дерево, Розмарин, Лаванда',
+                time: '2.5 месяца'
+            },
+            5: {
+                image: 'imgs/5.png',
+                title: 'Проект "Современный сад"',
+                designer: 'Павел Волков',
+                plants: 'Декоративные травы, Хвойные растения',
+                time: '2 месяца'
+            },
+            6: {
+                image: 'imgs/6.png',
+                title: 'Проект "Природный оазис"',
+                designer: 'Мария Соколова',
+                plants: 'Многолетние цветы, Декоративные кустарники',
+                time: '3 месяца'
+            }
+        };
+
+        const project = projectDetails[projectId];
+        if (project) {
+            document.getElementById('projectImage').src = project.image;
+            document.getElementById('projectTitle').innerText = project.title;
+            document.getElementById('designerName').innerText = `Дизайнер: ${project.designer}`;
+            document.getElementById('plantNames').innerText = `Растения: ${project.plants}`;
+            document.getElementById('completionTime').innerText = `Срок реализации: ${project.time}`;
+        }
+    </script>
+
+
+</body>
+
+</html>

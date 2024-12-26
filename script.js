@@ -1,26 +1,26 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         section.style.opacity = 0;
         section.style.transition = 'opacity 1s';
-        section.getBoundingClientRect(); 
+        section.getBoundingClientRect();
         section.style.opacity = 1;
     });
 });
-document.getElementById('requestForm').addEventListener('submit', function(event) {
+document.getElementById('requestForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Предотвращаем отправку формы
     // Здесь можно добавить код для обработки данных формы, если необходимо
     alert('Форма отправлена!'); // Пример уведомления
 
-     // Очищаем поля ввода
-     this.reset(); // Сбрасываем форму
+    // Очищаем поля ввода
+    this.reset(); // Сбрасываем форму
 });
 
 
-  const testimonials = [
+const testimonials = [
     {
         text: " Сотрудничество с компанией превзошло ожидания. Заказали ландшафтный проект на участке в 15 соток в Красногорске. Компания предложила несколько оригинальных решений, учла все пожелания по зонам для отдыха и цветникам.",
-        image: "imgs/Отзыв1.jpg", 
+        image: "imgs/Отзыв1.jpg",
         author: "Иван Иванов"
     },
     {
@@ -30,7 +30,7 @@ document.getElementById('requestForm').addEventListener('submit', function(event
     },
     {
         text: " Ландшафтная команда компании превратила участок в настоящий райский уголок, в котором есть бассейн, спортплощадка, детская зона. Проект участка составлен профессионально и с вниманием к деталям. ",
-        image: "imgs/Отзыв3.jpg", 
+        image: "imgs/Отзыв3.jpg",
         author: "Сергей Смирнов"
     },
 ];
@@ -50,7 +50,7 @@ const updateTestimonial = () => {
 
 document.getElementById('nextBtn').addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % testimonials.length;
-    updateTestimonial(); 
+    updateTestimonial();
 });
 
 document.getElementById('prevBtn').addEventListener('click', () => {
@@ -60,4 +60,36 @@ document.getElementById('prevBtn').addEventListener('click', () => {
 
 // Инициализация слайдера
 updateTestimonial();
- 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+    if (scrollToTopBtn) { // Проверяем существование кнопки
+        // Показывать/скрывать кнопку при прокрутке
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Плавная прокрутка наверх при клике
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+// Добавляем автоматическое скрытие кнопки при загрузке страницы
+window.addEventListener('load', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (scrollToTopBtn) {
+        if (window.scrollY <= 100) {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    }
+});
